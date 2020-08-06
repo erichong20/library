@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Bebas Neue', sans-serif;
+    height: 100%;
+    position: relative;
+    margin:0;
+    padding:0;
+
+    background-color: #7FDBFF;
+}
+
+.main-container {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 50px; /* height of your footer */
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.book { 
+    display: grid;
+
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 600px;
+    grid-template-columns: 30% 30% 20% 15% 5%;
+    font-size: 1.5rem;
+
+    color:  #001f3f;
+}
+
+.header{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+    font-size: 2rem;
+    display: grid;
+    max-width: 600px;
+    grid-template-columns: 30% 30% 20% 20%;
+
+    color: darkred;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 3.5rem;
+}
+
+.newBook{
+    border: 1px solid #001f3f;
+    padding: 0.4rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1rem;
+    color: #001f3f;
+    background-color: #7FDBFF;
+
+    position:absolute;
+    top:50px;
+    right:100px;
+
+}
+
+.newBook:hover{
+    background-color: #001f3f;
+    color: #7FDBFF;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    margin: 50px auto;
+    width: 30rem;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    width: 100%;
+}
+
+.form__header {
+    width: 100%;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgb(0, 77, 155);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form__close {
+    color: #ccc;
+    font-size: 2rem;
+
+}
+
+.form__close:hover, .form__close:focus {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.form__title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: rgb(0, 61, 122);
+}
+
+.form__item {
+    padding-bottom: 0.75rem;
+}
+
+.form__label {
+    font-size: 1.15rem;
+}
+
+
+.form__input {
+    display: block;
+    height: 2.5rem;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    margin: 0.5rem 0 0.25rem 0;
+    width: 100%;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+}
+
+.form__radio--list {
+    padding-top: 0.5rem;
+}
+
+.form__radio {
+    margin: 0 0.25rem 0 0;
+    
+}
+
+.form__submit {
+    margin-top: 1rem;
+}
+
+.form__submit {
+    border: 1px solid rgb(0, 77, 155);
+    border-radius: 2px;
+    padding: 0.4rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1.15rem;
+    color: rgb(0, 77, 155);
+    background-color: #f4f4f4;
+    font-family: "Open Sans", sans-serif;
+}
+
+.form__submit:hover, .form__submit:focus {
+    background-color: rgb(0, 77, 155);
+    color: white;
+    border: 1px solid rgb(0, 77, 155);
+    border-radius: 2px;
+}
+
+.book__delete {
+    font-size: 1.25rem;
+    color: darkred;
+    justify-self: right;
+}
+
+.book__delete:hover, .book__delete:focus {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
